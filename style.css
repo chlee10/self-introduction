@@ -4,12 +4,12 @@
    ========================================================= */
 
 :root {
-  --bg:        #0f1020;
-  --surface:   rgba(255, 255, 255, 0.06);
-  --surface-2: rgba(255, 255, 255, 0.1);
-  --text:      #f4f4fb;
-  --text-dim:  #a9a9c7;
-  --border:    rgba(255, 255, 255, 0.12);
+  --bg:        #f6f7fc;
+  --surface:   #ffffff;
+  --surface-2: #eef0f9;
+  --text:      #1c1d2b;
+  --text-dim:  #6b6d85;
+  --border:    rgba(28, 29, 43, 0.1);
 
   /* 메인 그라데이션 (보라 → 파랑 → 핑크) */
   --grad: linear-gradient(135deg, #6d5dfc 0%, #4f9cff 50%, #ff7eb6 100%);
@@ -17,6 +17,7 @@
 
   --radius: 20px;
   --shadow: 0 18px 40px -18px rgba(109, 93, 252, 0.55);
+  --card-shadow: 0 10px 30px -16px rgba(28, 29, 43, 0.25);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -37,7 +38,7 @@ body {
   position: fixed;
   border-radius: 50%;
   filter: blur(90px);
-  opacity: 0.55;
+  opacity: 0.3;
   z-index: 0;
   pointer-events: none;
 }
@@ -200,6 +201,7 @@ body {
   border-radius: var(--radius);
   padding: 18px 10px;
   text-align: center;
+  box-shadow: var(--card-shadow);
 }
 .stat strong {
   display: block;
@@ -244,6 +246,7 @@ body {
   margin-top: 16px;
   text-decoration: none;
   color: inherit;
+  box-shadow: var(--card-shadow);
   transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
 .card:active {
@@ -294,6 +297,7 @@ body {
   padding: 15px 16px;
   text-decoration: none;
   color: var(--text);
+  box-shadow: var(--card-shadow);
   transition: transform .15s ease, background .15s ease;
 }
 .contact-item:active { transform: scale(.98); background: var(--surface-2); }
